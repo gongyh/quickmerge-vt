@@ -204,5 +204,6 @@ mergercall.append(str(prefix))
 
 #run the merging program
 if not args.stop_after_nucmer and not args.stop_after_df and not args.clean_only:
-    subprocess.call(mergercall)
+    print(" ".join(mergercall))
+    sys.exit(subprocess.call(mergercall))
 
